@@ -1,80 +1,12 @@
-@import "../../responsive.scss";
+@use 'sass:math';
 
-.homePage{
-    display: flex;
-    height: 100%;
+$n: 14;
 
-    .textContainer {
-        flex: 3;
-
-        .wrapper {
-            padding-right: 100px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 50px;
-            height: 100%;
-
-            @include sm {
-                justify-content: flex-start;
-            }
-
-            @include md {
-                padding: 0;
-            }
-
-            .title {
-                font-size: 64px;
-
-                @include lg {
-                    font-size: 48px;
-                }
-            }
-
-            .boxes {
-                display: flex;
-                justify-content: space-between;
-
-                @include sm {
-                    display: none;
-                }
-
-                h1 {
-                    font-size: 36px;
-
-                    @include lg {
-                        font-size: 32px;
-                    }
-                }
-                 h2 {
-                    font-size: 20px;
-                    font-weight: 300;
-                 }
-            }
-        }
-    }
-    .imgContainer {
-        flex: 2;
-        background-color: #fcf5f3;
-        position: relative;
-        display: flex;
-        align-items: center;
-
-        @include md {
-            display: none;
-        }
-
-        img {
-            width: 115%;
-            position: absolute;
-            right: 0;
-
-            @include lg {
-                width: 105%;
-            }
-        }
-    }
-
-    
+.blob1 {
+  aspect-ratio: 1;
+  clip-path: shape(from 91.96% 38.91%,curve to 93.49% 61.98% with 95.50% 50.00%,curve to 82.96% 83.13% with 91.49% 73.96%,curve to 62.21% 93.08% with 74.43% 92.31%,curve to 38.53% 91.78% with 50.00% 93.85%,curve to 17.84% 81.81% with 27.07% 89.72%,curve to 4.48% 61.95% with 8.61% 73.90%,curve to 6.23% 39.06% with 0.36% 50.00%,curve to 18.61% 17.51% with 12.10% 28.12%,curve to 37.56% 5.01% with 25.12% 6.90%,curve to 60.76% 7.93% with 50.00% 3.13%,curve to 79.97% 20.28% with 71.51% 12.74%,curve to 91.96% 38.91% with 88.43% 27.81%);
 }
-
+.blob2 {
+  aspect-ratio: 1;
+  clip-path: shape(from 54.80% 13.81%,curve to 74.81% 36.83% with 75.20% 19.54%,curve to 65.71% 61.49% with 74.42% 54.13%,curve to 38.57% 77.48% with 57.01% 68.84%,curve to 19.47% 65.42% with 20.13% 86.11%,curve to 26.61% 26.40% with 18.82% 44.73%,curve to 54.80% 13.81% with 34.41% 8.08%);
+}

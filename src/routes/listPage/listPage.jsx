@@ -1,4 +1,3 @@
-import "./listPage.scss";
 
 function ListPage() {
   return (

@@ -1,10 +1,7 @@
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Layout from "./routes/layout/Layout";
 import HomePage from "./routes/homePage/homePage";
-import {
-    createBrowserRouter,
-    RouterProvider,
-  } from "react-router-dom";
 import ListPage from "./routes/listPage/listPage";
-import Layout from "./routes/layout/layout";
 import SinglePage from "./routes/singlePage/singlePage";
 import LoginPage from "./routes/loginPage/loginPage";
 
@@ -17,19 +14,19 @@ function App() {
           children: [
             {
                 path:"/",
-                element:<HomePage/>
+                element:<HomePage />
             },
             {
                 path:"/list",
-                element:<ListPage/>
+                element:<ListPage />
             },
             {
                 path:"/:id",
-                element:<SinglePage/>
+                element:<SinglePage />
             },
             {
                 path:"/login",
-                element:<LoginPage/>
+                element:<LoginPage />
             },
           ]
         },

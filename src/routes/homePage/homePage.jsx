@@ -1,35 +1,26 @@
-import SearchBar from '../../components/searchBar/searchBar'
 import './homePage.scss'
 
 export default function HomePage() {
-  return (
-    <div className='homePage'>
-        <div className="textContainer">
-            <div className="wrapper">
-                <h1 className='title'>Find Real Estate & Get Your Dream Place</h1>
-                <p>
-                When you are planning to sell your property while looking to buy a new one, it is essential to follow a series of key steps to ensure the success of these simultaneous transactions. In this article, we’ll take you through the various steps to consider in order to successfully complete these complex transactions
-                </p>
-                <SearchBar/>
-                <div className="boxes">
-                    <div className="box">
-                        <h1>16+</h1>
-                        <h2>Years of Experience</h2>
-                    </div>
-                    <div className="box">
-                        <h1>200</h1>
-                        <h2>Award Gained</h2>
-                    </div>
-                    <div className="box">
-                        <h1>2000+</h1>
-                        <h2>Property Ready</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div className="imgContainer">
-            <img src="./bg.png" alt="" />
-        </div>
-    </div>
-  )
+
+	const text = `What a Zen place to live... Where else can you say that these days? 
+Discover Budha. Here you will find the tranquility of nature and the convenience of the nearby city. 
+Take the car to work, cycle to the bakery, or take public transport to the center of Brussels, 
+then return to the peace and quiet of your Budha residence. 
+The apartments and houses are built to last, making them a safe choice you'll never want to leave.`;
+
+	return (
+		<div className='flex justify-between px-20 py-10'>
+			<div className='grid grid-cols-2 text-black'>
+				<div className="flex justify-center items-center text-inherit p-8">
+					<img src="./street.jpg" alt="" className='blob1' />
+				</div>
+				<div className="flex flex-col justify-center items-center p-8 gap-8 shadow-sm">
+					<h1 className='text-3xl md:text-4xl lg:text-5xl font-semibold'>
+						Find Real Estate & Get Your Dream Place
+					</h1>
+					<div className='text-xl'>{text}</div>
+				</div>
+			</div>
+		</div>
+	)
 }

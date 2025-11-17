@@ -1,8 +1,6 @@
-import "./loginPage.scss";
-
 function LoginPage() {
   return (
-    <div>LoginPage</div>
+    <div className="text-black">LoginPage</div>
   )
 }
 

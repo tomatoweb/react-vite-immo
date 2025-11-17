@@ -1,4 +1,3 @@
-import "./singlePage.scss";
 
 function SinglePage() {
   return (

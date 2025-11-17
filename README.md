@@ -1,6 +1,6 @@
 
-React Native + Vite + SASS
---------------------------
+React 18 Native + Vite + SASS
+---
 npm create vite@latest
 
 
@@ -10,6 +10,6 @@ npm run dev
 
 
 
-help :
-----
+contribution :
+---
 https://www.youtube.com/watch?v=HFj5FMb0jwY&t=2398s&ab_channel=LamaDev
