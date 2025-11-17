@@ -3,7 +3,7 @@ import Layout from "./routes/layout/Layout";
 import HomePage from "./routes/homePage/homePage";
 import ListPage from "./routes/listPage/listPage";
 import SinglePage from "./routes/singlePage/singlePage";
-import LoginPage from "./routes/loginPage/loginPage";
+import LoginPage from "./routes/loginPage/loginPage"; 
 
 function App() {
 

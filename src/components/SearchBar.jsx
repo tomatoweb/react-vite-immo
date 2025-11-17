@@ -16,19 +16,21 @@ function SearchBar() {
 		setQuery((prev) => ({ ...prev, type: val }))
 	}
 
+	console.log(query)
+
 	return (
-		<div className='z-10 rounded-md text-black'>
+		<div className='z-10 rounded-md text-black  mt-30'>
 			<div className="">
 
 				{/* Tabs */}
-				<ul className="flex flex-wrap text-md font-medium text-center border-x border-t rounded-t-lg text-white border-gray-100">
+				<ul className="flex w-fit text-md font-medium text-center text-white ">
 					{types.map((type) => (
 						<div
 							onClick={() => switchType(type)}
 							key={type}
 							className={
-								`${query.type === type ? "bg-gray-100 text-black" : "cursor-pointer"} 
-								inline-block p-4`
+								`${query.type === type ? "border border-white bg-gray-100 text-black" : "cursor-pointer"} 
+								inline-block p-4 border`
 							}
 						>
 							{type}
@@ -39,7 +41,7 @@ function SearchBar() {
 			</div>
 
 			{/* Options: location, price min max */}
-			<form action="" className='flex flex-col sm:flex-row items-center bg-gray-100 rounded-b-lg px-4 py-2 text-black gap-1'>
+			<form action="" className='flex flex-col sm:flex-row items-center bg-gray-100 rounded-b-lg rounded-r-none sm:rounded-r-lg px-4 text-black gap-1'>
 				<input
 					className='border border-gray-400 px-2 rounded w-40'
 					type="text"
@@ -63,7 +65,7 @@ function SearchBar() {
 					max={10000000}
 					placeholder='max price'
 				/>
-				<button className=''>
+				<button className='cursor-pointer ml-2'>
 					<CiSearch className='' size={35} />
 				</button>
 			</form>
