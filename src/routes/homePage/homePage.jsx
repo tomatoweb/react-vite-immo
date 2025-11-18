@@ -10,16 +10,18 @@ then return to the peace and quiet of your Budha residence.
 The apartments and houses are built to last, making them a safe choice you'll never want to leave.`;
 
 	return (
-		<div className='flex flex-col justify-between h-[222vh]'>
-			<Splash />
-			<video
-				autoPlay
-				loop
-				muted
-				className="absolute top-0 video object-cover w-full h-full z-0"
-			>
-				<source src="/realestate.mp4" type="video/mp4" />
-			</video>
+		<div className='flex flex-col justify-between'>
+			<div className='h-screen'>
+				<Splash />
+				<video
+					autoPlay
+					loop
+					muted
+					className="absolute top-0 video object-cover w-screen h-full z-0"
+				>
+					<source src="/realestate.mp4" type="video/mp4" />
+				</video>
+			</div>
 			<div className='grid grid-cols-2 text-black'>
 				<div className="flex justify-center items-center text-inherit p-8">
 					<img src="./street.jpg" alt="" className='blob1' />

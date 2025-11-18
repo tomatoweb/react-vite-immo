@@ -18,22 +18,19 @@ function Navbar() {
 	}, [])
 
 	return (
-		<div className={`fixed flex justify-between px-4 z-10 font-bold w-full ${textColor ? 'text-black bg-white shadow-sm' : ''}`}>
+		<div className={`fixed top-0 flex justify-between px-8 z-1 font-bold w-full text-white ${textColor ? 'bg-white shadow-sm' : ''}`}>
 
 			<div className='py-4'>
 				<Link to="/" >
-					<img src={`${textColor ? '/logob.svg' : '/logo.svg'}`} alt="" className='w-25 lg:w-40' />
+					<img src={`${textColor ? '/logob.svg' : '/logo.svg'}`} alt="" className='w-25 lg:w-35' />
 				</Link>
 			</div>
-
-			<div className='hidden lg:flex items-center gap-10 mr-8'>
-				<div className='hidden lg:flex justify-between gap-14 text-xl font-medium'>
-					<Link to="">About</Link>
-					<Link to="">Contact</Link>
-					<Link to="">Agents</Link>
-					<Link to="/login">Sign in</Link>
-					<Link to="/" className=''>Sign up</Link>
-				</div>
+			<div className={`hidden lg:flex justify-between items-center gap-14 text-xl font-medium ${textColor ? 'text-black' : ''}`}>
+				<Link to="">About</Link>
+				<Link to="">Contact</Link>
+				<Link to="">Agents</Link>
+				<Link to="/login">Sign in</Link>
+				<Link to="/" className=''>Sign up</Link>
 			</div>
 
 			<div className='fixed right-10 top-10 flex lg:hidden z-6'>

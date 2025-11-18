@@ -11,3 +11,9 @@
 @theme {
 	--font-davinci: "davinci", sans-serif;
 }
+
+:root {
+	background-color: rgb(175, 175, 175);
+	padding: 0;
+	margin: 0;
+}

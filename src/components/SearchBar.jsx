@@ -1,22 +1,28 @@
 import { useState } from 'react';
 import { CiSearch } from "react-icons/ci";
+import { useNavigate } from 'react-router-dom';
 
 function SearchBar() {
 
+	const navigate = useNavigate()
+
 	const types = ["All Properties", "Buy", "Rent"];
 
-	const [query, setQuery] = useState({
+	const [formData, setFormData] = useState({
 		type: types[0],
-		location: '',
+		city: '',
 		minPrice: 0,
 		maxPrice: 0
 	});
 
 	const switchType = (val) => {
-		setQuery((prev) => ({ ...prev, type: val }))
+		setFormData((prev) => ({ ...prev, type: val }))
 	}
 
-	console.log(query)
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		navigate('/list', { state: { formData } })
+	}
 
 	return (
 		<div className='z-10 rounded-md text-black  mt-30'>
@@ -29,7 +35,7 @@ function SearchBar() {
 							onClick={() => switchType(type)}
 							key={type}
 							className={
-								`${query.type === type ? "border border-white bg-gray-100 text-black" : "cursor-pointer"} 
+								`${formData.type === type ? "border border-white bg-gray-100 text-black" : "cursor-pointer"} 
 								inline-block p-4 border`
 							}
 						>
@@ -40,16 +46,20 @@ function SearchBar() {
 
 			</div>
 
-			{/* Options: location, price min max */}
-			<form action="" className='flex flex-col sm:flex-row items-center bg-gray-100 rounded-b-lg rounded-r-none sm:rounded-r-lg px-4 text-black gap-1'>
+			{/* Options: city, price min max */}
+			<form onSubmit={handleSubmit} className='flex flex-col sm:flex-row items-center bg-gray-100 rounded-b-lg rounded-r-none sm:rounded-r-lg px-4 text-black gap-1'>
 				<input
+					value={formData.city}
+					onChange={e => setFormData({...formData, city: e.target.value})}
 					className='border border-gray-400 px-2 rounded w-40'
 					type="text"
-					name="location"
+					name="city"
 					placeholder=
-					'City location'
-				/>				
+					'City city'
+				/>
 				<input
+					value={formData.minPrice}
+					onChange={e => setFormData({...formData, minPrice: e.target.value})}
 					className='border border-gray-400 px-2 rounded w-40'
 					type="text"
 					name="minPrice"
@@ -58,6 +68,8 @@ function SearchBar() {
 					placeholder='min price'
 				/>
 				<input
+				value={formData.maxPrice}
+				onChange={e => setFormData({...formData, maxPrice: e.target.value})}
 					className='border border-gray-400 px-2 rounded w-40'
 					type="number"
 					name="maxPrice"

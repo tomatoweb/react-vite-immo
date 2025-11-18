@@ -6,13 +6,13 @@ import Footer from "../../components/Footer";
 function Layout() {
 	return (
 		<>
-			<div className="flex flex-col text-[#ede6f7] h-screen">
-				<Navbar />				
+			<div className="">
+				<Navbar />
+				<Outlet />
+				<Footer />
 			</div>
-			<Outlet />
-			<Footer />
 		</>
 	)
 }
 
-export default Layout
+	export default Layout
