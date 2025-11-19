@@ -50,6 +50,28 @@ function ListPage(props) {
 			<div>
 				<InputColor onChange={setColor} />
 			</div>
+			<div 
+				className={`mt-10 w-50 h-50 rounded border flex justify-center items-center p-2`}
+				style={{background: `${color}`}}
+			>
+				This div receives its bg color from its children component
+				 here below, with a callback passed as props
+			</div>
+
+			<div>
+				<InputColor onChange={setColor} />
+			</div>
+			<div 
+				className={`mt-10 w-50 h-50 rounded border flex justify-center items-center p-2`}
+				style={{background: `${color}`}}
+			>
+				This div receives its bg color from its children component
+				 here below, with a callback passed as props
+			</div>
+
+			<div>
+				<InputColor onChange={setColor} />
+			</div>
 
 			
 		</div>
