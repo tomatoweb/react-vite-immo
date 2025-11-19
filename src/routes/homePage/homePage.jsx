@@ -4,9 +4,9 @@ import './homePage.scss'
 export default function HomePage() {
 
 	const text = `What a Zen place to live... Where else can you say that these days? 
-Discover Budha. Here you will find the tranquility of nature and the convenience of the nearby city. 
+Discover. Here you will find the tranquility of nature and the convenience of the nearby city. 
 Take the car to work, cycle to the bakery, or take public transport to the center of Brussels, 
-then return to the peace and quiet of your Budha residence. 
+then return to the peace and quiet of your residence. 
 The apartments and houses are built to last, making them a safe choice you'll never want to leave.`;
 
 	return (
